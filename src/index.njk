@@ -3,14 +3,5 @@ layout: base
 ---
 
 <div class="container">
-    <div class="h-card">
-        <h1>{{ author.name }}</h1>
-        <p>{{ author.occupation }}</p>
-        <p>{{ author.location }}</p>
-
-        {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
-        <img src="{{ avatarUrl | url }}" alt="{{ author.name }}" />
-    </div>
-
     {% include "entrylist.njk" %}
 </div>

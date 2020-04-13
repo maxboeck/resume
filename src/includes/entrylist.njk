@@ -2,8 +2,13 @@
     {% for entry in collections.entries | reverse %}
     <li>
         <time datetime="{{ entry.data.start | dateToFormat("yyyy-MM-dd") }}">
-            {{ entry.data.start | dateToFormat("dd.MM.yyyy") }}&ndash;
-            {% if entry.data.end %}{{ entry.data.end | dateToFormat("dd.MM.yyyy") }}{% else %}Currently{% endif %}
+            {{ entry.data.start | dateToFormat("MM/yyyy") }}
+            <span>&ndash;</span>
+            {% if entry.data.end %}
+                {{ entry.data.end | dateToFormat("MM/yyyy") }}
+            {% else %}
+                currently
+            {% endif %}
         </time>
         <p>{{ entry.data.title }}, {{ entry.data.company }}</p>
     </li>
