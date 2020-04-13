@@ -1,18 +1,25 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
+{%- set pageTitle -%}{{ author.name }}{% if author.occupation %} - {{ author.occupation }}{% endif %}{% if author.location %}, {{ author.location }}{% endif %}{%- endset -%}
+{%- set pageDescription -%}Online Resume of {{ author.name }}{%- endset -%}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ pageTitle }}</title>
 
 {# General #}
-<meta name="description" content="{{ description or meta.description }}">
+<meta name="description" content="{{ pageDescription }}">
 <link rel="canonical" href="{{ absolutePageUrl }}">
 
 {# Open Graph #}
-<meta property="og:site_name" content="{{ meta.title }}">
-<meta property="og:title" content="{{ title or meta.title }}">
-<meta property="og:description" content="{{ description  or meta.description }}">
+<meta property="og:site_name" content="{{ pageTitle }}">
+<meta property="og:title" content="{{ pageTitle }}">
+<meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:locale" content="{{ meta.locale }}">
-<meta name="twitter:card" content="{% if image -%}summary_large_image{% else %}summary{% endif %}">
-{%- if image -%}
-    <meta property="og:image" content="{{ image | url | absoluteUrl(meta.url) }}">
+<meta name="twitter:card" content="summary">
+{%- if author.avatar -%}
+    {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
+    <meta property="og:image" content="{{ avatarUrl | url | absoluteUrl(meta.url) }}">
 {%- endif -%}
 
 {# Favicon #}
