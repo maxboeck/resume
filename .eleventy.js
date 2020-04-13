@@ -44,7 +44,6 @@ module.exports = function (config) {
 
     // Layouts
     config.addLayoutAlias('base', 'base.njk')
-    config.addLayoutAlias('post', 'post.njk')
 
     // Pass-through files
     config.addPassthroughCopy('src/robots.txt')
