@@ -3,5 +3,19 @@ layout: base
 ---
 
 <div class="container">
-    {% include "entrylist.njk" %}
+    <section id="section-experience">
+        <h2>Work Experience</h2>
+        {% set entries = collections.work %}
+        {% include "entrylist.njk" %}
+    </section>
+
+    <section id="section-education">
+        <h2>Education</h2>
+        {% set entries = collections.education %}
+        {% include "entrylist.njk" %}
+    </section>
+    
+    <section id="section-skills">
+        <h2>Skills</h2>
+    </section>
 </div>

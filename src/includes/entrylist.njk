@@ -1,5 +1,6 @@
+{% if entries %}
 <ol reversed>
-    {% for entry in collections.entries | reverse %}
+    {% for entry in entries | reverse %}
     <li>
         <time datetime="{{ entry.data.start | dateToFormat("yyyy-MM-dd") }}">
             {{ entry.data.start | dateToFormat("MM/yyyy") }}
@@ -14,3 +15,4 @@
     </li>
     {% endfor %}
 <ol>
+{% endif %}

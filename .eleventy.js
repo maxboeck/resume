@@ -46,18 +46,25 @@ module.exports = function (config) {
     config.addLayoutAlias('base', 'base.njk')
 
     // Collections
-    config.addCollection('entries', function (collection) {
-        const inEntryFolder = (item) =>
-            item.inputPath.match(/\/entries\//) !== null
+    const collections = ['work', 'education']
+    collections.forEach((name) => {
+        config.addCollection(name, function (collection) {
+            const folderRegex = new RegExp(`\/${name}\/`)
+            const inEntryFolder = (item) =>
+                item.inputPath.match(folderRegex) !== null
 
-        const byStartDate = (a, b) => {
-            if (a.data.start && b.data.start) {
-                return a.data.start - b.data.start
+            const byStartDate = (a, b) => {
+                if (a.data.start && b.data.start) {
+                    return a.data.start - b.data.start
+                }
+                return 0
             }
-            return 0
-        }
 
-        return collection.getAllSorted().filter(inEntryFolder).sort(byStartDate)
+            return collection
+                .getAllSorted()
+                .filter(inEntryFolder)
+                .sort(byStartDate)
+        })
     })
 
     // Pass-through files
