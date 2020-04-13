@@ -45,6 +45,21 @@ module.exports = function (config) {
     // Layouts
     config.addLayoutAlias('base', 'base.njk')
 
+    // Collections
+    config.addCollection('entries', function (collection) {
+        const inEntryFolder = (item) =>
+            item.inputPath.match(/\/entries\//) !== null
+
+        const byStartDate = (a, b) => {
+            if (a.data.start && b.data.start) {
+                return a.data.start - b.data.start
+            }
+            return 0
+        }
+
+        return collection.getAllSorted().filter(inEntryFolder).sort(byStartDate)
+    })
+
     // Pass-through files
     config.addPassthroughCopy('src/robots.txt')
     config.addPassthroughCopy('src/site.webmanifest')
