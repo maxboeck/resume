@@ -1,0 +1,10 @@
+{
+    "name": "Max Böck",
+    "occupation": "Front-End Developer",
+    "location": "Vienna, AT",
+    "avatar": "avatar.jpg",
+    "contact": {
+        "email": "hello@mxb.dev",
+        "twitter": "mxbck"
+    }
+}
