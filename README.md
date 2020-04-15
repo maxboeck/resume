@@ -5,9 +5,10 @@ An online résumé.
 ## Features
 
 * Fully Customizable
+* Printable
 * Semantic HTML
 * Accessible (WCAG AA) 
-* Printable
+* Microformats
 * Mobile-Friendly
 * Search Engine Optimized
 * Lightning Fast
