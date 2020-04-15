@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<div class="container">
+<main class="main">
     <section id="section-introduction">
         <h2>About Me</h2>
         {{ content | safe }}
@@ -19,4 +19,28 @@ layout: base
         {% set entries = collections.education %}
         {% include "entrylist.njk" %}
     </section>
-</div>
+</main>
+
+<aside class="sidebar">
+    {% if author.skills %}
+    <div>
+        <h2>Skills</h2>
+        <ul>
+        {% for skill in author.skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {% if author.languages %}
+    <div>
+        <h2>Languages</h2>
+        <ul>
+        {% for language in author.languages %}
+            <li>{{ language.name }} ({{ language.level }})</li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</aside>
