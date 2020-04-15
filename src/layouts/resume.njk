@@ -5,40 +5,44 @@ layout: base
 <main class="main">
     <section id="section-introduction">
         <h2>About Me</h2>
-        {{ content | safe }}
+        <div class="p-summary">
+            {{ content | safe }}
+        </div>
     </section>
 
     <section id="section-experience">
         <h2>Work Experience</h2>
         {% set entries = collections.work %}
+        {% set microformat = "p-experience" %}
         {% include "entrylist.njk" %}
     </section>
 
     <section id="section-education">
         <h2>Education</h2>
         {% set entries = collections.education %}
+        {% set microformat = "p-education" %}
         {% include "entrylist.njk" %}
     </section>
 </main>
 
 <aside class="sidebar">
     {% if author.skills %}
-    <section>
+    <section id="section-skills">
         <h2>Skills</h2>
         <ul>
         {% for skill in author.skills %}
-            <li>{{ skill }}</li>
+            <li class="p-skill">{{ skill }}</li>
         {% endfor %}
         </ul>
     </section>
     {% endif %}
 
     {% if author.languages %}
-    <section>
+    <section id="section-languages">
         <h2>Languages</h2>
         <ul>
         {% for language in author.languages %}
-            <li>{{ language.name }} ({{ language.level }})</li>
+            <li class="p-skill">{{ language.name }} ({{ language.level }})</li>
         {% endfor %}
         </ul>
     </section>

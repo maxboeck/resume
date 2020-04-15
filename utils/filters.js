@@ -20,5 +20,9 @@ module.exports = {
             chars.unshift(['&#', str[i].charCodeAt(), ';'].join(''))
         }
         return chars.join('')
+    },
+
+    stripSpaces: function (str) {
+        return str.replace(/\s/g, '')
     }
 }

@@ -7,7 +7,7 @@
 <body {% if meta.primaryColor %}style="--primary-color: {{ meta.primaryColor }};"{% endif %}>
     <div hidden>{% iconsprite %}</div>
 
-    <div class="layout" role="document">
+    <div class="h-resume" role="document">
         {% include "header.njk" %}
         {{ content | safe }}
         {% include "footer.njk" %}
