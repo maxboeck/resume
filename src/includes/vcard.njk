@@ -1,0 +1,15 @@
+<div class="vcard">
+    <h1 class="fn">{{ author.name }}</h1>
+    <p class="note">{{ author.occupation }}</p>
+    <p class="adr"><span class="locality">{{ author.location }}</span></p>
+
+    {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
+    <img class="photo" src="{{ avatarUrl | url }}" width="250" alt="{{ author.name }}" />
+
+    {% if author.contact.email %}
+        <a class="email" href="mailto:{{ author.contact.email | obfuscate | safe }}">{{ author.contact.email | obfuscate | safe }}</a>
+    {% endif %}
+    {% if author.contact.telephone %}
+        <a class="tel" href="tel:{{ author.contact.telephone }}">{{ author.contact.telephone }}</a>
+    {% endif %}
+</div>

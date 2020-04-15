@@ -2,47 +2,45 @@
 layout: base
 ---
 
-<div class="container">
-    <main class="main">
-        <section id="section-introduction">
-            <h2>About Me</h2>
-            {{ content | safe }}
-        </section>
+<main class="main">
+    <section id="section-introduction">
+        <h2>About Me</h2>
+        {{ content | safe }}
+    </section>
 
-        <section id="section-experience">
-            <h2>Work Experience</h2>
-            {% set entries = collections.work %}
-            {% include "entrylist.njk" %}
-        </section>
+    <section id="section-experience">
+        <h2>Work Experience</h2>
+        {% set entries = collections.work %}
+        {% include "entrylist.njk" %}
+    </section>
 
-        <section id="section-education">
-            <h2>Education</h2>
-            {% set entries = collections.education %}
-            {% include "entrylist.njk" %}
-        </section>
-    </main>
+    <section id="section-education">
+        <h2>Education</h2>
+        {% set entries = collections.education %}
+        {% include "entrylist.njk" %}
+    </section>
+</main>
 
-    <aside class="sidebar">
-        {% if author.skills %}
-        <div>
-            <h2>Skills</h2>
-            <ul>
-            {% for skill in author.skills %}
-                <li>{{ skill }}</li>
-            {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+<aside class="sidebar">
+    {% if author.skills %}
+    <section>
+        <h2>Skills</h2>
+        <ul>
+        {% for skill in author.skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
 
-        {% if author.languages %}
-        <div>
-            <h2>Languages</h2>
-            <ul>
-            {% for language in author.languages %}
-                <li>{{ language.name }} ({{ language.level }})</li>
-            {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-    </aside>
-</div>
+    {% if author.languages %}
+    <section>
+        <h2>Languages</h2>
+        <ul>
+        {% for language in author.languages %}
+            <li>{{ language.name }} ({{ language.level }})</li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% endif %}
+</aside>

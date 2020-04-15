@@ -28,5 +28,11 @@
             "name": "German",
             "level": "basic"
         }
+    ],
+    "social": [
+        {
+            "name": "Github",
+            "url": "https://github.com/annawalton"
+        }
     ]
 }

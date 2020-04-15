@@ -1,14 +1,5 @@
 <header class="header">
-    <div class="container">
-        
-        <div class="h-card">
-            <h1>{{ author.name }}</h1>
-            <p>{{ author.occupation }}</p>
-            <p>{{ author.location }}</p>
 
-            {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
-            <img src="{{ avatarUrl | url }}" width="250" alt="{{ author.name }}" />
-        </div>
+    {% include "vcard.njk" %}
 
-    </div>
 </header>

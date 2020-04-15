@@ -29,3 +29,25 @@
 <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}">
 <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
 <meta name="theme-color" content="#1a1a1a">
+
+{# JSON LD #}
+<script type="application/ld+json">
+    {
+        "name":"{{ author.name }}",
+        "description":"{{ author.occupation }}",
+        "author": {
+            "@type":"Person",
+            "name":"{{ author.name }}"
+        },
+        "@type":"WebSite",
+        "url":"{{ meta.url }}",
+        "image":"{{ meta.url }}/assets/images/{{ author.avatar }}",
+        "headline":"{{ author.name }}",
+        "sameAs":[
+            {%- for social in author.social -%}
+                "{{ social.url }}"{%- if not forloop.last -%},{%- endif -%}
+            {%- endfor -%}
+        ],
+        "@context":"http://schema.org"
+    }
+</script>
