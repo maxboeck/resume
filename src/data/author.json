@@ -3,8 +3,9 @@
     "occupation": "Front-End Developer",
     "location": "Vienna, AT",
     "avatar": "avatar.jpg",
+    "pronouns": "she/her",
     "contact": {
-        "email": "hello@mxb.dev",
+        "email": "anna.walton@gmail.com",
         "telephone": "+01 23 456 789"
     },
     "skills": [

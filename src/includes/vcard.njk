@@ -5,8 +5,13 @@
     {% endif %}
 
     <h1 class="vcard__title p-name">{{ author.name }}</h1>
-    <p class="vcard__subtitle p-job-title">{{ author.occupation }}</p>
-    <p class="vcaord__location p-locality">{{ author.location }}</p>
+    <p class="vcard__subtitle">
+        <span class="p-job-title">{{ author.occupation }}</span>
+        {% if author.location %}
+            <span aria-hidden="true">&middot;</span>
+            <span class="p-locality">{{ author.location }}</span>
+        {% endif %}
+    </p> 
 
     {% if author.pronouns %}
         <p class="vcard__pronouns p-gender-identity">{{ author.pronouns }}</p>
@@ -15,11 +20,13 @@
     <div class="vard__contact p-contact">
         {% if author.contact.email %}
             <a class="vcard__link u-email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+                {% icon "email" %}
                 {{ author.contact.email | obfuscate | safe }}
             </a>
         {% endif %}
         {% if author.contact.telephone %}
             <a class="vcard__link p-tel" href="tel:{{ author.contact.telephone | stripSpaces }}">
+                {% icon "telephone" %}
                 {{ author.contact.telephone }}
             </a>
         {% endif %}

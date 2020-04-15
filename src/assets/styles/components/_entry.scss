@@ -20,4 +20,10 @@
         font-family: $font-family-serif;
         font-size: 1.125rem;
     }
+
+    &__content {
+        * > * {
+            margin-top: 1em;
+        }
+    }
 }

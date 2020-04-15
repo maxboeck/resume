@@ -20,7 +20,7 @@
             <p class="entry__organization p-org h-card">
                 <span class="p-name">{{ entry.data.organization }}</span>
                 {% if entry.data.location %}
-                    <span>&middot;</span>
+                    <span aria-hidden="true">&middot;</span>
                     <span class="p-location">{{ entry.data.location }}</span>
                 {% endif %}
             </p>
