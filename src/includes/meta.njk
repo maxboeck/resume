@@ -34,7 +34,7 @@
 <script type="application/ld+json">
     {
         "name":"{{ author.name }}",
-        "description":"{{ author.occupation }}",
+        "description":"{{ author.occupation }}{% if author.location %} in {{ author.location }}{% endif %}",
         "author": {
             "@type":"Person",
             "name":"{{ author.name }}"
