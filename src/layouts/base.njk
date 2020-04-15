@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
 </head>
 <body {% if meta.primaryColor %}style="--primary-color: {{ meta.primaryColor }};"{% endif %}>
-    <div hidden>{% iconsprite %}</div>
+    <div data-icon-sprite hidden>{% iconsprite %}</div>
 
     <div class="layout h-resume" role="document">
         {% include "header.njk" %}
