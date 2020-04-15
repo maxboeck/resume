@@ -5,6 +5,28 @@
     "avatar": "avatar.jpg",
     "contact": {
         "email": "hello@mxb.dev",
-        "twitter": "mxbck"
-    }
+        "telephone": "+01 23 456 789"
+    },
+    "skills": [
+        "HTML",
+        "CSS",
+        "Javascript / ES6",
+        "UI Design",
+        "React",
+        "Git"
+    ],
+    "languages": [
+        {
+            "name": "English",
+            "level": "native"
+        },
+        {
+            "name": "Spanish",
+            "level": "fluent"
+        },
+        {
+            "name": "German",
+            "level": "basic"
+        }
+    ]
 }
