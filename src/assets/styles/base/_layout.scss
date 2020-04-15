@@ -5,29 +5,10 @@ body {
 }
 
 .layout {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     min-height: 100%;
     min-height: 100vh;
     position: relative;
-
-    .header,
-    .footer {
-        flex: none;
-    }
-
-    .main {
-        display: flex;
-        flex-direction: column;
-        flex: 1 0 auto;
-
-        &::after {
-            content: '';
-            display: block;
-            height: 0px;
-            visibility: hidden;
-        }
-    }
 }
 
 .container {
