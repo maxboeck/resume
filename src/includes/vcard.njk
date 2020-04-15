@@ -1,36 +1,40 @@
-<div class="h-card">
-    {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
+<div class="vcard h-card">
     {% if author.avatar %}
-        <img class="u-photo" src="{{ avatarUrl | url }}" width="250" alt="{{ author.name }}" />
+        {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
+        <img class="vcard__avatar u-photo" src="{{ avatarUrl | url }}" width="250" alt="{{ author.name }}" />
     {% endif %}
 
-    <h1 class="p-name">{{ author.name }}</h1>
-    <p class="p-job-title">{{ author.occupation }}</p>
-    <p class="p-locality">{{ author.location }}</p>
+    <h1 class="vcard__title p-name">{{ author.name }}</h1>
+    <p class="vcard__subtitle p-job-title">{{ author.occupation }}</p>
+    <p class="vcaord__location p-locality">{{ author.location }}</p>
 
     {% if author.pronouns %}
-        <p class="p-gender-identity">{{ author.pronouns }}</p>
+        <p class="vcard__pronouns p-gender-identity">{{ author.pronouns }}</p>
     {% endif %}
 
-    <div class="p-contact">
+    <div class="vard__contact p-contact">
         {% if author.contact.email %}
-            <a class="u-email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+            <a class="vcard__link u-email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
                 {{ author.contact.email | obfuscate | safe }}
             </a>
         {% endif %}
         {% if author.contact.telephone %}
-            <a class="p-tel" href="tel:{{ author.contact.telephone | stripSpaces }}">
+            <a class="vcard__link p-tel" href="tel:{{ author.contact.telephone | stripSpaces }}">
                 {{ author.contact.telephone }}
             </a>
         {% endif %}
 
-        {% for social in author.social %}
-            <a href="{{ social.url }}" rel="me">
-                {%- set isSocialIcon = true -%}
-                {%- icon social.name, isSocialIcon -%}
-                <span class="p-nickname">{{- social.user -}}</span>
-                <span class="sr-only">on {{ social.name }}</a>
-            </a>
-        {% endfor %}
+        {% if author.social %}
+            <div class="vcard__social">
+                {% for social in author.social %}
+                    <a class="vcard__link" href="{{ social.url }}" rel="me">
+                        {%- set isSocialIcon = true -%}
+                        {%- icon social.name, isSocialIcon -%}
+                        <span class="p-nickname">{{- social.user -}}</span>
+                        <span class="sr-only">on {{ social.name }}</a>
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %} 
     </div>
 </div>

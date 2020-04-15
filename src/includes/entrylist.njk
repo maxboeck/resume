@@ -1,22 +1,8 @@
 {% if entries %}
-<ol reversed>
+<ol class="entrylist" reversed>
     {% for entry in entries | reverse %}
-    <li class="h-event {% if microformat %}{{ microformat }}{% endif %}">
-        <h3 class="p-name">{{ entry.data.title }}, {{ entry.data.company }}</h3>
-
-        <p>
-            <time class="dt-start" datetime="{{ entry.data.start | dateToFormat("yyyy-MM-dd") }}">{{ entry.data.start | dateToFormat("MM/yyyy") }}</time>
-            <span>&ndash;</span>
-            {% if entry.data.end %}
-                <time class="dt-end" datetime="{{ entry.data.end | dateToFormat("yyyy-MM-dd") }}">{{ entry.data.end | dateToFormat("MM/yyyy") }}</time>
-            {% else %}
-                <span>Present</span>
-            {% endif %}
-        </p>
-        
-        {% if entry.data.location %}
-        <p class="p-location">{{ entry.data.location }}</p>
-        {% endif %}
+    <li class="entrylist__item h-event {% if microformat %}{{ microformat }}{% endif %}">
+        {% include "entry.njk" %}
     </li>
     {% endfor %}
 </ol>
