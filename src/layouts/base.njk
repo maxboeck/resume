@@ -4,7 +4,7 @@
     {% include "meta.njk" %}
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
 </head>
-<body>
+<body {% if meta.primaryColor %}style="--primary-color: {{ meta.primaryColor }};"{% endif %}>
     <div hidden>{% iconsprite %}</div>
 
     <div class="layout" role="document">

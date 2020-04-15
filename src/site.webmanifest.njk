@@ -1,8 +1,11 @@
+---
+permalink: site.webmanifest
+---
 {
-    "lang": "en",
+    "lang": "{{ meta.lang }}",
     "dir": "ltr",
-    "name": "Resume",
-    "short_name": "resume",
+    "name": "Resume of {{ author.name }}",
+    "short_name": "{{ author.name }}",
     "icons": [
         {
             "src": "/assets/images/favicon/android-chrome-192x192.png",
@@ -15,7 +18,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#1a1a1a",
+    "theme_color": "{{ meta.primaryColor }}",
     "background_color": "#1a1a1a",
     "start_url": "/index.html",
     "display": "standalone",
