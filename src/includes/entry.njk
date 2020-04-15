@@ -1,5 +1,5 @@
 <article class="entry">
-    <header class="entry__header">
+    <div class="entry__header">
         <h3 class="entry__title p-name">{{ entry.data.title }}</h3>
         
         <p class="entry__time">
@@ -25,7 +25,7 @@
                 {% endif %}
             </p>
         {% endif %}
-    </header>
+    </div>
 
     {% if entry.templateContent %}
         <div class="entry__content p-summary">
