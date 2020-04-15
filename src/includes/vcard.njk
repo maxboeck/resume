@@ -12,4 +12,13 @@
     {% if author.contact.telephone %}
         <a class="tel" href="tel:{{ author.contact.telephone }}">{{ author.contact.telephone }}</a>
     {% endif %}
+
+    {% for social in author.social %}
+        <a href="{{ social.url }}" rel="me">
+            {%- set isSocialIcon = true -%}
+            {%- icon social.name, isSocialIcon -%}
+            {{- social.user -}}
+            <span class="sr-only">on {{ social.name }}</a>
+        </a>
+    {% endfor %}
 </div>

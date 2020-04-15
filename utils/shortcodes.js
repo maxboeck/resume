@@ -1,7 +1,12 @@
 module.exports = {
-    icon: function (name) {
-        return `<svg class="icon icon--${name}" role="img" aria-hidden="true" width="24" height="24">
-                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${name}"></use>
+    icon: function (name, isSocial) {
+        const id = name.toLowerCase().replace(/\s/g, '')
+        const availableSocialIcons = ['github', 'twitter', 'linkedin', 'skype']
+        if (isSocial && !availableSocialIcons.includes(id)) {
+            return null
+        }
+        return `<svg class="icon icon--${id}" role="img" aria-hidden="true" width="24" height="24">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-${id}"></use>
                 </svg>`
     }
 }
