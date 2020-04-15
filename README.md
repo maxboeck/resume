@@ -5,14 +5,12 @@ An online résumé.
 ## Features
 
 * Fully Customizable
-* Printable
 * Semantic HTML
 * Accessible (WCAG AA) 
-* Microformats
-* Mobile-Friendly
+* `h-resume` Microformat
+* Self-Contained (no external resources)
 * Search Engine Optimized
-* Lightning Fast
-* Free
+* Critical CSS Inlined
 
 ## Credits
 
