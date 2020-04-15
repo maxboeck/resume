@@ -1,5 +1,5 @@
 {%- set absolutePageUrl -%}{{ page.url | url | absoluteUrl(meta.url) }}{%- endset -%}
-{%- set pageTitle -%}{{ author.name }}{% if author.occupation %} - {{ author.occupation }}{% endif %}{% if author.location %}, {{ author.location }}{% endif %}{%- endset -%}
+{%- set pageTitle -%}{{ author.name }}{% if author.occupation %} - {{ author.occupation }}{% endif %}{% if author.location %} in {{ author.location }}{% endif %}{%- endset -%}
 {%- set pageDescription -%}Online Resume of {{ author.name }}{%- endset -%}
 
 <meta charset="UTF-8">
@@ -28,7 +28,9 @@
 <link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}" sizes="16x16">
 <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}">
 <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
-<meta name="theme-color" content="#1a1a1a">
+{% if meta.primaryColor %}
+    <meta name="theme-color" content="{{ meta.primaryColor }}">
+{% endif %}
 
 {# JSON LD #}
 <script type="application/ld+json">
