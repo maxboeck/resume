@@ -11,6 +11,7 @@ An online résumé.
 * Self-Contained (no external resources)
 * Search Engine Optimized
 * Critical CSS Inlined
+* Print Styles
 
 ## Credits
 
