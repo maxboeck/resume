@@ -1,0 +1,14 @@
+.entry {
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &__time {
+        order: -1;
+    }
+}

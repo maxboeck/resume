@@ -1,0 +1,5 @@
+.entrylist {
+    &__item + &__item {
+        margin-top: 2rem;
+    }
+}
