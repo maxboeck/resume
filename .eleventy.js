@@ -44,6 +44,7 @@ module.exports = function (config) {
 
     // Layouts
     config.addLayoutAlias('base', 'base.njk')
+    config.addLayoutAlias('resume', 'resume.njk')
 
     // Collections
     const collections = ['work', 'education']

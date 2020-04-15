@@ -3,6 +3,11 @@ layout: base
 ---
 
 <div class="container">
+    <section id="section-introduction">
+        <h2>About Me</h2>
+        {{ content | safe }}
+    </section>
+
     <section id="section-experience">
         <h2>Work Experience</h2>
         {% set entries = collections.work %}
