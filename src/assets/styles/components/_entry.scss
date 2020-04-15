@@ -9,6 +9,15 @@
     }
 
     &__time {
+        color: $gray;
+        font-size: 0.875rem;
+        letter-spacing: 0.125em;
+        text-transform: uppercase;
         order: -1;
+    }
+
+    &__organization {
+        font-family: $font-family-serif;
+        font-size: 1.125rem;
     }
 }
