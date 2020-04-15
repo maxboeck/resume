@@ -1,6 +1,7 @@
 ---
 title: Intern
-company: Microsoft
+organization: Microsoft
+location: Redmond, CA
 start: 2019-02-18
 end: 2019-11-21
 ---

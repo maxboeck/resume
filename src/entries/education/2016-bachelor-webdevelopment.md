@@ -1,6 +1,7 @@
 ---
-title: Bachelor of Science
-institution: SAE Institute
+title: Bachelor of Science, Webdevelopment
+organization: SAE Institute
+location: Vienna, AT
 start: 2014-01-30
 end: 2016-08-14
 ---

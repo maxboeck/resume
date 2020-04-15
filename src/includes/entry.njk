@@ -1,25 +1,29 @@
 <div class="entry">
-    <h3 class="entry__title p-name">{{ entry.data.title }}, {{ entry.data.company }}</h3>
-
-    <div class="entry__meta">
-        <p>
-            <time class="dt-start" datetime="{{ entry.data.start | dateToFormat("yyyy-MM-dd") }}">
-                {{ entry.data.start | dateToFormat("MM/yyyy") }}
+    <p class="entry__time">
+        <time class="dt-start" datetime="{{ entry.data.start | dateToFormat("yyyy-MM-dd") }}">
+            {{ entry.data.start | dateToFormat("MM/yyyy") }}
+        </time>
+        <span>&ndash;</span>
+        {% if entry.data.end %}
+            <time class="dt-end" datetime="{{ entry.data.end | dateToFormat("yyyy-MM-dd") }}">
+                {{ entry.data.end | dateToFormat("MM/yyyy") }}
             </time>
-            <span>&ndash;</span>
-            {% if entry.data.end %}
-                <time class="dt-end" datetime="{{ entry.data.end | dateToFormat("yyyy-MM-dd") }}">
-                    {{ entry.data.end | dateToFormat("MM/yyyy") }}
-                </time>
-            {% else %}
-                <span>Present</span>
+        {% else %}
+            <span>Present</span>
+        {% endif %}
+    </p>
+
+    <h3 class="entry__title p-name">{{ entry.data.title }}</h3>
+    
+    {% if entry.data.organization %}
+        <p class="entry__organization p-org h-card">
+            <span class="p-name">{{ entry.data.organization }}</span>
+            {% if entry.data.location %}
+                <span>&middot;</span>
+                <span class="p-location">{{ entry.data.location }}</span>
             {% endif %}
         </p>
-        
-        {% if entry.data.location %}
-            <p class="p-location">{{ entry.data.location }}</p>
-        {% endif %}
-    </div>
+    {% endif %}
 
     {% if entry.templateContent %}
         <div class="entry__content p-summary">
