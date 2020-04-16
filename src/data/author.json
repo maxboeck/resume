@@ -1,11 +1,11 @@
 {
-    "name": "Anna Walton",
+    "name": "Anna Quincey",
     "occupation": "Front-End Developer",
     "location": "Vienna, AT",
     "avatar": "avatar.jpg",
     "pronouns": "she/her",
     "contact": {
-        "email": "anna.walton@gmail.com",
+        "email": "anna.quincey@gmail.com",
         "telephone": "+01 23 456 789"
     },
     "skills": [
@@ -33,13 +33,13 @@
     "social": [
         {
             "name": "Github",
-            "user": "@annawalton",
-            "url": "https://github.com/annawalton"
+            "user": "@annaquincey",
+            "url": "https://github.com/annaquincey"
         },
         {
             "name": "LinkedIn",
-            "user": "AnnaWltn",
-            "url": "https://www.linkedin.com/in/annawalton"
+            "user": "AnnaQncy",
+            "url": "https://www.linkedin.com/in/annaquincey"
         }
     ]
 }
