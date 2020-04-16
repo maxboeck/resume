@@ -5,6 +5,10 @@
         margin: 1cm 3cm;
     }
 
+    :root {
+        --text-color: #000000;
+    }
+
     html,
     body {
         width: 100%;
@@ -16,7 +20,6 @@
     *,
     *:before,
     *:after {
-        color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
         transition: none !important;
@@ -57,7 +60,7 @@
     }
 
     .section__title {
-        border-bottom: 1pt solid $gray-light;
+        border-color: $gray-light;
     }
 
     .vcard__avatar {
