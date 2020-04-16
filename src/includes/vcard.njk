@@ -22,13 +22,13 @@
 
         <div class="vard__contact p-contact">
             {% if author.contact.email %}
-                <a class="vcard__link u-email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+                <a class="vcard__link u-email" aria-label="Email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
                     {% icon "email" %}
                     {{ author.contact.email | obfuscate | safe }}
                 </a>
             {% endif %}
             {% if author.contact.telephone %}
-                <a class="vcard__link p-tel" href="tel:{{ author.contact.telephone | stripSpaces }}">
+                <a class="vcard__link p-tel" aria-label="Telephone" href="tel:{{ author.contact.telephone | stripSpaces }}">
                     {% icon "telephone" %}
                     {{ author.contact.telephone }}
                 </a>
@@ -37,7 +37,7 @@
             {% if author.social %}
                 <div class="vcard__social">
                     {% for social in author.social %}
-                        <a class="vcard__link" href="{{ social.url }}" rel="me">
+                        <a class="vcard__link" href="{{ social.url }}" title="{{ social.name }}" rel="me">
                             {%- set isSocialIcon = true -%}
                             {%- icon social.name, isSocialIcon -%}
                             <span class="p-nickname">{{- social.user -}}</span>
