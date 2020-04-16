@@ -233,10 +233,12 @@ input[type='search'] {
 }
 
 ::selection {
-    background: $brand-color-secondary;
+    background: $primary-color;
+    background: var(--primary-color, $primary-color);
     color: #fff;
 }
 ::-moz-selection {
-    background: $brand-color-secondary;
+    background: $primary-color;
+    background: var(--primary-color, $primary-color);
     color: #fff;
 }

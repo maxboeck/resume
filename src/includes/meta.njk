@@ -28,8 +28,8 @@
 <link rel="icon" type="image/png" href="{{ '/assets/images/favicon/favicon-16x16.png' | url }}" sizes="16x16">
 <link rel="shortcut icon" href="{{ '/assets/images/favicon/favicon.ico' | url }}">
 <link rel="manifest" href="{{ '/site.webmanifest' | url }}">
-{% if meta.primaryColor %}
-    <meta name="theme-color" content="{{ meta.primaryColor }}">
+{% if meta.colors.primary %}
+    <meta name="theme-color" content="{{ meta.colors.primary }}">
 {% endif %}
 
 {# JSON LD #}

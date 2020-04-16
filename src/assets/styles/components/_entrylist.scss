@@ -33,7 +33,8 @@
             width: 0.625rem;
             height: 0.625rem;
             border-radius: 50%;
-            background-color: red;
+            background-color: $secondary-color;
+            background-color: var(--secondary-color, $secondary-color);
             position: absolute;
             top: 2.25rem;
             left: 0;

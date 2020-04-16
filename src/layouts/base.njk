@@ -5,7 +5,7 @@
     <link rel="preload" href="{{ '/assets/fonts/butler-medium.woff2' | url }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
 </head>
-<body {% if meta.primaryColor %}style="--primary-color: {{ meta.primaryColor }};"{% endif %}>
+<body {% if meta.colors %}style="{{ meta.colors | themeColors }}"{% endif %}>
     <div data-icon-sprite hidden>{% iconsprite %}</div>
 
     <div class="layout h-resume" role="document">

@@ -1,4 +1,5 @@
 const { DateTime } = require('luxon')
+const isEmpty = require('lodash/isEmpty')
 
 module.exports = {
     dateToFormat: function (date, format) {
@@ -24,5 +25,19 @@ module.exports = {
 
     stripSpaces: function (str) {
         return str.replace(/\s/g, '')
+    },
+
+    themeColors: function (colors) {
+        let style = ''
+        if (!colors || isEmpty(colors)) {
+            return ''
+        }
+        if (colors.primary) {
+            style += `--primary-color:${colors.primary};`
+        }
+        if (colors.secondary) {
+            style += `--secondary-color:${colors.secondary};`
+        }
+        return style
     }
 }

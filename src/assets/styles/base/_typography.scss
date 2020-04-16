@@ -32,6 +32,19 @@ p {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: from-font;
+
+    color: $primary-color;
+    color: var(--primary-color, $primary-color);
+
+    @include hover-focus {
+        text-decoration: underline;
+    }
+}
+
 .lead {
     font-size: 1.5rem;
     font-weight: 300;

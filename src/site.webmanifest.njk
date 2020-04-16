@@ -18,8 +18,8 @@ permalink: site.webmanifest
             "type": "image/png"
         }
     ],
-    "theme_color": "{{ meta.primaryColor }}",
-    "background_color": "#1a1a1a",
+    "theme_color": "{{ meta.colors.primary or "#1a1a1a" }}",
+    "background_color": "{{ meta.colors.primary or "#1a1a1a" }}",
     "start_url": "/index.html",
     "display": "standalone",
     "orientation": "natural"
