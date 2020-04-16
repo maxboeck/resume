@@ -28,7 +28,7 @@
     </div>
 
     {% if entry.templateContent %}
-        <div class="entry__content p-summary">
+        <div class="entry__content p-summary" data-spellcheck>
             {{ entry.templateContent | safe }}
         </div>
     {% endif %}
