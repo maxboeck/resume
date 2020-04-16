@@ -1,5 +1,5 @@
 ---
-title: Bachelor of Science, Webdevelopment
+title: Master, Webdevelopment
 organization: SAE Institute
 location: Vienna, AT
 start: 2014-01-30
