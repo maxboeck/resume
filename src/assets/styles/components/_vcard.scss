@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    padding: $spacing-y 0;
 
     &__content {
         padding-top: 1rem;
@@ -43,6 +42,8 @@
     }
 
     @include mq(lg) {
+        padding: $spacing-y 0;
+
         &__avatar {
             position: fixed;
             top: calc(#{$spacing-y} + 1rem);
