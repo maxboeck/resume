@@ -46,7 +46,12 @@
             top: calc(#{$spacing-y} + 1rem);
             right: 75%;
             transform: translateX(25%);
+            transition: transform 0.2s ease;
             margin: 0;
+
+            .js-scrolled & {
+                transform: translateX(25%) scale(0.75);
+            }
         }
     }
 }

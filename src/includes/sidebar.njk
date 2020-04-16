@@ -1,7 +1,21 @@
 <aside class="sidebar">
     <div class="container">
-        <button class="printbutton js-print u-screen-only">
-            {% icon "print" %} print
-        </button>
+
+        <div class="actions">
+            {% if author.contact.email %}
+                <a class="actions__btn" aria-label="Email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+                    {% icon "email" %}
+                </a>
+            {% endif %}
+            {% if author.contact.telephone %}
+                <a class="actions__btn" aria-label="Telephone" href="tel:{{ author.contact.telephone | stripSpaces }}">
+                    {% icon "telephone" %}
+                </a>
+            {% endif %}
+            <button class="actions__btn js-print u-screen-only">
+                {% icon "print" %}
+            </button>
+        </div>
+
     </div>
 </aside>
