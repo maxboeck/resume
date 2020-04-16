@@ -62,12 +62,16 @@
     .vcard__avatar {
         position: static !important;
         transform: none !important;
-        margin: 0 2rem 0 -2rem !important;
+        margin: 0 2rem 0 0 !important;
         border: 0;
     }
 
     .entrylist::before,
     .entrylist__item::before {
         -webkit-print-color-adjust: exact !important;
+    }
+
+    .entry {
+        page-break-inside: avoid;
     }
 }
