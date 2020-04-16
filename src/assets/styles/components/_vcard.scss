@@ -5,7 +5,6 @@
     padding: $spacing-y 0;
 
     &__content {
-        flex: 1 0 auto;
         padding-top: 1rem;
     }
     &__title {
@@ -32,7 +31,6 @@
         font-size: 1.125rem;
         font-family: $font-family-serif;
         color: $gray;
-        margin-left: 0.5rem;
     }
     &__link {
         display: inline-flex;
