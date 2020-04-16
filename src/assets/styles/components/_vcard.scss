@@ -1,5 +1,11 @@
 .vcard {
+    position: relative;
+
     &__title {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        line-height: 1;
     }
     &__subtitle {
         font-size: 1.5rem;
@@ -7,11 +13,18 @@
         line-height: 1.4;
     }
     &__avatar {
+        width: 11rem;
+        height: 11rem;
         border-radius: 50%;
+        border: 5px solid #fff;
     }
     &__location {
     }
     &__pronouns {
+        font-size: 1.125rem;
+        font-family: $font-family-serif;
+        color: $gray;
+        margin-left: 0.5rem;
     }
     &__contact {
     }

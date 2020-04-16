@@ -5,15 +5,36 @@ body {
 }
 
 .layout {
-    display: grid;
     min-height: 100%;
     min-height: 100vh;
     position: relative;
+
+    .header {
+        grid-area: header;
+        padding: 2rem 0;
+    }
+    .main {
+        grid-area: main;
+    }
+    .sidebar {
+        grid-area: sidebar;
+        background-color: var(--primary-color);
+    }
+    .footer {
+        grid-area: footer;
+    }
+
+    @include mq(lg) {
+        display: grid;
+        grid-template-areas:
+            'sidebar header'
+            'sidebar main'
+            'sidebar footer';
+    }
 }
 
 .container {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 5%;
+    padding-right: 5%;
     max-width: $container-max-width;
 }

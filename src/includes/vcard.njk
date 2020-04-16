@@ -1,10 +1,16 @@
 <div class="vcard h-card">
     {% if author.avatar %}
         {%- set avatarUrl -%}/assets/images/{{ author.avatar }}{% endset %}
-        <img class="vcard__avatar u-photo" src="{{ avatarUrl | url }}" width="250" alt="{{ author.name }}" />
+        <img class="vcard__avatar u-photo" src="{{ avatarUrl | url }}" width="200" height="200" alt="{{ author.name }}" />
     {% endif %}
 
-    <h1 class="vcard__title p-name">{{ author.name }}</h1>
+    <div class="vcard__title">
+        <h1 class="p-name">{{ author.name }}</h1>
+        {% if author.pronouns %}
+            <em class="vcard__pronouns p-gender-identity">({{ author.pronouns }})</em>
+        {% endif %}
+    </div>
+
     <p class="vcard__subtitle">
         <span class="p-job-title">{{ author.occupation }}</span>
         {% if author.location %}
@@ -12,10 +18,6 @@
             <span class="p-locality">{{ author.location }}</span>
         {% endif %}
     </p> 
-
-    {% if author.pronouns %}
-        <p class="vcard__pronouns p-gender-identity">{{ author.pronouns }}</p>
-    {% endif %}
 
     <div class="vard__contact p-contact">
         {% if author.contact.email %}
