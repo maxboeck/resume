@@ -14,10 +14,13 @@
         letter-spacing: 0.125em;
         text-transform: uppercase;
         order: -1;
+        margin-bottom: 0.25rem;
+    }
+
+    &__title {
     }
 
     &__organization {
-        font-family: $font-family-serif;
         font-size: 1.125rem;
     }
 

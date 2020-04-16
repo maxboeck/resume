@@ -1,5 +1,43 @@
 .entrylist {
-    &__item + &__item {
+    position: relative;
+    padding-left: 1rem;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 1px;
+        background: $gray;
+        background: linear-gradient(
+            to top,
+            rgba($gray, 0) 0%,
+            rgba($gray, 1) 100px,
+            rgba($gray, 1) 100%
+        );
+        position: absolute;
+        top: 2.25rem;
+        left: 1rem;
+        bottom: 0;
+    }
+
+    > * + * {
         margin-top: 2rem;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 2rem;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 0.625rem;
+            height: 0.625rem;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            top: 2.25rem;
+            left: 0;
+            transform: translate(-50%, 0);
+        }
     }
 }
