@@ -20,12 +20,12 @@
     }
 
     > * + * {
-        margin-top: 2rem;
+        margin-top: $spacing-y;
     }
 
     &__item {
         position: relative;
-        padding-left: 2rem;
+        padding-left: $spacing-x;
 
         &::before {
             content: '';

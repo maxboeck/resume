@@ -11,18 +11,20 @@ body {
 
     .header {
         grid-area: header;
-        padding: 2rem 0;
+        padding: $spacing-y 0;
     }
     .main {
         grid-area: main;
     }
     .sidebar {
         grid-area: sidebar;
-        background-color: var(--primary-color);
+        background-color: $primary-color;
+        background-color: var(--primary-color, $primary-color);
     }
     .footer {
         grid-area: footer;
-        padding: 2rem 0;
+        padding: $spacing-y 0;
+        margin-top: $spacing-y;
         background-color: $gray-light;
     }
 

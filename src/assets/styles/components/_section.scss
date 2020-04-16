@@ -1,9 +1,20 @@
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-y * 2;
+}
+
 .section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    grid-column: span 2;
+
+    @include mq(md) {
+        &--half {
+            grid-column: span 1;
+        }
+    }
 
     &__title {
-        margin-bottom: 2rem;
+        margin-bottom: $spacing-y;
         padding-bottom: 0.5rem;
         border-bottom: 1px solid $gray;
     }

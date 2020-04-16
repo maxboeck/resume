@@ -3,7 +3,7 @@ layout: base
 ---
 
 <main class="main">
-    <div class="container">
+    <div class="sections container">
 
         <section class="section" id="section-introduction">
             <h2 class="section__title">About Me</h2>
@@ -27,7 +27,7 @@ layout: base
         </section>
 
         {% if author.skills %}
-        <section class="section" id="section-skills">
+        <section class="section section--half" id="section-skills">
             <h2 class="section__title">Skills</h2>
             <ul class="bulletlist">
             {% for skill in author.skills %}
@@ -38,7 +38,7 @@ layout: base
         {% endif %}
 
         {% if author.languages %}
-        <section class="section" id="section-languages">
+        <section class="section section--half" id="section-languages">
             <h2 class="section__title">Languages</h2>
             <ul class="bulletlist">
             {% for language in author.languages %}
