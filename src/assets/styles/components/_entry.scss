@@ -25,6 +25,7 @@
     }
 
     &__content {
+        max-width: 60ch;
         * > * {
             margin-top: 1em;
         }

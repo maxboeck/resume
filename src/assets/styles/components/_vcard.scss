@@ -5,20 +5,18 @@
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;
-        line-height: 1;
     }
     &__subtitle {
         font-size: 1.5rem;
         font-weight: 300;
         line-height: 1.4;
+        margin-bottom: 1rem;
     }
     &__avatar {
         width: 11rem;
         height: 11rem;
         border-radius: 50%;
         border: 5px solid #fff;
-    }
-    &__location {
     }
     &__pronouns {
         font-size: 1.125rem;

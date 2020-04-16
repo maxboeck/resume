@@ -13,6 +13,7 @@ h6 {
 
 h1 {
     font-size: 4rem;
+    line-height: 1;
 }
 
 h2 {
@@ -30,5 +31,6 @@ p {
 .lead {
     font-size: 1.5rem;
     font-weight: 300;
-    line-height: 1.4;
+    line-height: 1.5;
+    max-width: 60ch;
 }
