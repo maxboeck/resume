@@ -1,0 +1,73 @@
+@media print {
+    // GENERAL PRINT RESET
+
+    @page {
+        margin: 1cm 3cm;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        font-size: 10px !important;
+        overflow: visible;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-shadow: none !important;
+        text-shadow: none !important;
+        transition: none !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h1,
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    // ELEMENTS
+    // PRINT STYLE ADJUSTMENTS
+
+    .layout {
+        display: block;
+    }
+
+    .container {
+        max-width: none !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .header {
+        padding: 0;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .section__title {
+        border-bottom: 1pt solid $gray-light;
+    }
+
+    .vcard__avatar {
+        position: static !important;
+        transform: none !important;
+        margin: 0 2rem 0 -2rem !important;
+        border: 0;
+    }
+
+    .entrylist::before,
+    .entrylist__item::before {
+        -webkit-print-color-adjust: exact !important;
+    }
+}

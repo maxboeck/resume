@@ -1,8 +1,11 @@
 .vcard {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     padding: 2rem 0;
 
     &__content {
+        flex: 1 0 0%;
         padding-top: 1rem;
     }
     &__title {
@@ -23,20 +26,13 @@
         border-radius: 50%;
         border: 5px solid #fff;
         box-shadow: $box-shadow-elevated;
+        margin-right: 2rem;
     }
     &__pronouns {
         font-size: 1.125rem;
         font-family: $font-family-serif;
         color: $gray;
         margin-left: 0.5rem;
-    }
-
-    @include mq(md) {
-        display: flex;
-
-        &__avatar {
-            margin-right: 2rem;
-        }
     }
 
     @include mq(lg) {
