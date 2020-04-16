@@ -2,6 +2,9 @@
     position: relative;
     padding: 2rem 0;
 
+    &__content {
+        padding-top: 1rem;
+    }
     &__title {
         display: flex;
         flex-wrap: wrap;
@@ -16,18 +19,10 @@
     &__avatar {
         width: 11rem;
         height: 11rem;
+        flex: 0 0 11rem;
         border-radius: 50%;
         border: 5px solid #fff;
         box-shadow: $box-shadow-elevated;
-        margin-bottom: 1rem;
-
-        @include mq(lg) {
-            position: fixed;
-            top: 3rem;
-            right: 75%;
-            transform: translateX(25%);
-            margin: 0;
-        }
     }
     &__pronouns {
         font-size: 1.125rem;
@@ -35,10 +30,22 @@
         color: $gray;
         margin-left: 0.5rem;
     }
-    &__contact {
+
+    @include mq(md) {
+        display: flex;
+
+        &__avatar {
+            margin-right: 2rem;
+        }
     }
-    &__social {
-    }
-    &__link {
+
+    @include mq(lg) {
+        &__avatar {
+            position: fixed;
+            top: 3rem;
+            right: 75%;
+            transform: translateX(25%);
+            margin: 0;
+        }
     }
 }

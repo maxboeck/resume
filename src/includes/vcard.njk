@@ -4,46 +4,48 @@
         <img class="vcard__avatar u-photo" src="{{ avatarUrl | url }}" width="200" height="200" alt="{{ author.name }}" />
     {% endif %}
 
-    <div class="vcard__title">
-        <h1 class="p-name">{{ author.name }}</h1>
-        {% if author.pronouns %}
-            <em class="vcard__pronouns p-gender-identity">({{ author.pronouns }})</em>
-        {% endif %}
-    </div>
+    <div class="vcard__content">
+        <div class="vcard__title">
+            <h1 class="p-name">{{ author.name }}</h1>
+            {% if author.pronouns %}
+                <em class="vcard__pronouns p-gender-identity">({{ author.pronouns }})</em>
+            {% endif %}
+        </div>
 
-    <p class="vcard__subtitle">
-        <span class="p-job-title">{{ author.occupation }}</span>
-        {% if author.location %}
-            <span aria-hidden="true">&middot;</span>
-            <span class="p-locality">{{ author.location }}</span>
-        {% endif %}
-    </p> 
+        <p class="vcard__subtitle">
+            <span class="p-job-title">{{ author.occupation }}</span>
+            {% if author.location %}
+                <span aria-hidden="true">&middot;</span>
+                <span class="p-locality">{{ author.location }}</span>
+            {% endif %}
+        </p> 
 
-    <div class="vard__contact p-contact">
-        {% if author.contact.email %}
-            <a class="vcard__link u-email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
-                {% icon "email" %}
-                {{ author.contact.email | obfuscate | safe }}
-            </a>
-        {% endif %}
-        {% if author.contact.telephone %}
-            <a class="vcard__link p-tel" href="tel:{{ author.contact.telephone | stripSpaces }}">
-                {% icon "telephone" %}
-                {{ author.contact.telephone }}
-            </a>
-        {% endif %}
+        <div class="vard__contact p-contact">
+            {% if author.contact.email %}
+                <a class="vcard__link u-email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+                    {% icon "email" %}
+                    {{ author.contact.email | obfuscate | safe }}
+                </a>
+            {% endif %}
+            {% if author.contact.telephone %}
+                <a class="vcard__link p-tel" href="tel:{{ author.contact.telephone | stripSpaces }}">
+                    {% icon "telephone" %}
+                    {{ author.contact.telephone }}
+                </a>
+            {% endif %}
 
-        {% if author.social %}
-            <div class="vcard__social">
-                {% for social in author.social %}
-                    <a class="vcard__link" href="{{ social.url }}" rel="me">
-                        {%- set isSocialIcon = true -%}
-                        {%- icon social.name, isSocialIcon -%}
-                        <span class="p-nickname">{{- social.user -}}</span>
-                        <span class="sr-only">on {{ social.name }}</a>
-                    </a>
-                {% endfor %}
-            </div>
-        {% endif %} 
+            {% if author.social %}
+                <div class="vcard__social">
+                    {% for social in author.social %}
+                        <a class="vcard__link" href="{{ social.url }}" rel="me">
+                            {%- set isSocialIcon = true -%}
+                            {%- icon social.name, isSocialIcon -%}
+                            <span class="p-nickname">{{- social.user -}}</span>
+                            <span class="sr-only">on {{ social.name }}</a>
+                        </a>
+                    {% endfor %}
+                </div>
+            {% endif %} 
+        </div>
     </div>
 </div>

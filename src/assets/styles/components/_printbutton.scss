@@ -1,4 +1,9 @@
 .printbutton {
+    display: flex;
+    color: #fff;
+    background-color: #222;
+    border: 0;
+
     .no-js & {
         display: none;
     }
