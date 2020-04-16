@@ -1,5 +1,6 @@
 .vcard {
     position: relative;
+    padding: 2rem 0;
 
     &__title {
         display: flex;
@@ -17,6 +18,16 @@
         height: 11rem;
         border-radius: 50%;
         border: 5px solid #fff;
+        box-shadow: $box-shadow-elevated;
+        margin-bottom: 1rem;
+
+        @include mq(lg) {
+            position: fixed;
+            top: 3rem;
+            right: 75%;
+            transform: translateX(25%);
+            margin: 0;
+        }
     }
     &__pronouns {
         font-size: 1.125rem;

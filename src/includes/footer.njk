@@ -1,9 +1,6 @@
 <footer class="footer">
-    <div class="container">
-        <button class="printbutton js-print u-screen-only">
-            {% icon "print" %} print this
-        </button>
-        <p>Last updated: {{ build.timestamp | dateToFormat('dd.MM.yyyy') }}</p>
+    <div class="container u-space-between">
         <p>&copy; {{ author.name }}</p>
+        <p>Last updated: {{ build.timestamp | dateToFormat('dd.MM.yyyy') }}</p>
     </div>
 </footer>
