@@ -1,11 +1,13 @@
 .sections {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: $spacing-y * 2;
+    column-gap: $spacing-x * 2;
 }
 
 .section {
     grid-column: span 2;
+    padding-top: $spacing-y;
+    padding-bottom: $spacing-y;
 
     @include mq(md) {
         &--half {
