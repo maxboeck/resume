@@ -20,21 +20,20 @@
     }
 
     @include mq(lg) {
-        opacity: 0;
+        display: none;
         flex-direction: column;
         position: fixed;
         top: 220px;
         right: 75%;
         padding: 0 0.5rem;
         text-align: right;
-        transition: opacity 0.2s linear;
 
         &__btn {
             margin: 0.5rem 1rem;
         }
 
         .js-scrolled & {
-            opacity: 1;
+            display: block;
         }
     }
 }
