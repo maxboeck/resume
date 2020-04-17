@@ -3,16 +3,16 @@
 
         <div class="actions">
             {% if author.contact.email %}
-                <a class="actions__btn" aria-label="Email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+                <a class="actions__btn has-tooltip" aria-label="Email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
                     {% icon "email" %}
                 </a>
             {% endif %}
             {% if author.contact.telephone %}
-                <a class="actions__btn" aria-label="Telephone" href="tel:{{ author.contact.telephone | stripSpaces }}">
+                <a class="actions__btn has-tooltip" aria-label="Telephone" href="tel:{{ author.contact.telephone | stripSpaces }}">
                     {% icon "telephone" %}
                 </a>
             {% endif %}
-            <button class="actions__btn js-print u-screen-only">
+            <button class="actions__btn js-print u-screen-only has-tooltip" aria-label="Print Résumé">
                 {% icon "print" %}
             </button>
         </div>
