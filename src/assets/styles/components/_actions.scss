@@ -2,6 +2,10 @@
     display: flex;
     justify-content: center;
 
+    .no-js & {
+        display: none;
+    }
+
     &__btn {
         @include button-reset;
         display: flex;
