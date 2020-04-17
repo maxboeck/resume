@@ -16,6 +16,65 @@ An online résumé. [Demo Site](https://demo-resume.netlify.app)
 * Critical CSS Inlined
 * Print Styles
 
+## Getting Started
+
+To install the necessary packages, run this command in the root folder of the site:
+
+```
+npm install
+```
+
+__Commands__  
+
+* Run `npm start` for a development server and live reloading
+* Run `npm run build` to generate a production build
+
+Deploy a fork of this template to Netlify:
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/maxboeck/resume) 
+
+## Customize your Résumé
+
+To edit the content and design of your résumé, follow these steps:
+
+### 1. Personal Details
+
+Open `src/data/author.json` and edit the information describing yourself. The following properties are supported:
+
+<table></table>
+
+### 2. Introduction
+
+Open `src/introduction.md` and edit the text content of the file with your personal short introduction summary. Limit it to 2-3 sentences and convey your motivation.
+
+Leave the `layout` and `permalink` data at the top in place, and save the file.
+
+### 3. Work Experience & Education
+
+The entries for the sections "work experience" and "education" are stored as markdown files in `src/entries/work` and `src/entries/education`.
+
+Delete the demo files in there and create your own. Include the following [frontmatter](https://www.11ty.dev/docs/data-frontmatter/) data:
+
+<table></table>
+
+### 4. Meta Data & Design
+
+Open `src/data/meta.json` and replace the `url` with the URL of your hosted résumé. You can also customize the language and color scheme here.
+
+Supported properties are:
+
+<table></table>
+
+## SpellCheck
+
+If you run the project locally in development, the content of your `introduction` and `entries` will be automatically spell-checked using your system default spellcheck engine.
+
+Possible misspelled words will be announced as warnings in the console output, like so:
+
+```
+Linter: check spelling for "incorect"
+```
+
 ## Credits
 
 Thanks to [Eric Bailey](https://ericwbailey.design/) for his post ["How to not make a résumé in React"](https://ericwbailey.design/writing/how-to-not-make-a-resume-in-react.html), which gave me the idea.
