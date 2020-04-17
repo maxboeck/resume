@@ -1,6 +1,7 @@
 ---
 title: Senior Front-End Developer
 organization: Netlify
+organizationUrl: https://www.netlify.com
 location: San Francisco, CA
 start: 2020-03-14
 ---

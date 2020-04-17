@@ -1,6 +1,7 @@
 ---
 title: Junior Developer
 organization: Mozilla
+organizationUrl: https://www.mozilla.org
 location: Mountain View, CA
 start: 2019-11-30
 end: 2020-03-14

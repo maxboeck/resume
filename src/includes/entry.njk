@@ -18,7 +18,11 @@
 
         {% if entry.data.organization %}
             <p class="entry__organization p-org h-card">
-                <span class="p-name">{{ entry.data.organization }}</span>
+                {% if entry.data.organizationUrl %}
+                    <a href="{{ entry.data.organizationUrl }}" class="p-name u-url" target="_blank" rel="noopener noreferrer">{{ entry.data.organization }}</a>
+                {% else %}
+                    <span class="p-name">{{ entry.data.organization }}</span>
+                {% endif %}
                 {% if entry.data.location %}
                     <span aria-hidden="true">&middot;</span>
                     <span class="p-location">{{ entry.data.location }}</span>
