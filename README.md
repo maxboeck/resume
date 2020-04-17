@@ -113,9 +113,49 @@ Leave the `layout` and `permalink` data at the top in place, and save the file.
 
 The entries for the sections "work experience" and "education" are stored as markdown files in `src/entries/work` and `src/entries/education`.
 
-Delete the demo files in there and create your own. Include the following [frontmatter](https://www.11ty.dev/docs/data-frontmatter/) data:
+Delete the demo files in there and create your own. The text should describe your responsibilities, learnings or achievements. Include the following [frontmatter](https://www.11ty.dev/docs/data-frontmatter/) data:
 
-<table></table>
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+            <th>Required</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>title</code></td>
+            <td>the title of the entry. in "work experience", this sould be your role/position, in "education" this should be the degree/certification earned.</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>start</code></td>
+            <td>ISO timestamp of when you started this job or education.</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>end</code></td>
+            <td>ISO timestamp of when you ended this job or education. If not defined, that entry will say "- Present"</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>organization</code></td>
+            <td>name of your employer (when "work") or school (when "education")</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>organizationUrl</code></td>
+            <td>link to website of your employer (when "work") or school (when "education")</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>location</code></td>
+            <td>location of company or school</td>
+            <td>optional</td>
+        </tr>
+    </tbody>
+</table>
 
 ### 4. Meta Data & Design
 
@@ -123,7 +163,42 @@ Open `src/data/meta.json` and replace the `url` with the URL of your hosted rés
 
 Supported properties are:
 
-<table></table>
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+            <th>Required</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>url</code></td>
+            <td>the URL of your hosted résumé, e.g. <code>"https://my-resume.com"</code>. (no trailing slash)</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>lang</code></td>
+            <td>the 2-digit language identifier of your résumé, e.g. "en", "de", etc.</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>locale</code></td>
+            <td>the locale code of your résumé, e.g. "en_US", "de_DE", etc.</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>colors.primary</code></td>
+            <td>The HEX code of the primary brand color. defaults to blue <code>#005b96</code></td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>colors.secondary</code></td>
+            <td>The HEX code of the secondary brand color. defaults to red <code>#fc6767</code></td>
+            <td>optional</td>
+        </tr>
+    </tbody>
+</table>
 
 ## SpellCheck
 
