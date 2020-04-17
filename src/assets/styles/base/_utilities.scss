@@ -3,39 +3,39 @@
 
 // Layout Utils
 
-.u-mt0 {
+.utl-mt0 {
     margin-top: 0 !important;
 }
-.u-mt1 {
+.utl-mt1 {
     margin-top: 1rem !important;
 }
-.u-mt2 {
+.utl-mt2 {
     margin-top: 2rem !important;
 }
-.u-mt3 {
+.utl-mt3 {
     margin-top: 3rem !important;
 }
-.u-mt4 {
+.utl-mt4 {
     margin-top: 4rem !important;
 }
 
-.u-mb0 {
+.utl-mb0 {
     margin-bottom: 0 !important;
 }
-.u-mb1 {
+.utl-mb1 {
     margin-bottom: 1rem !important;
 }
-.u-mb2 {
+.utl-mb2 {
     margin-bottom: 2rem !important;
 }
-.u-mb3 {
+.utl-mb3 {
     margin-bottom: 3rem !important;
 }
-.u-mb4 {
+.utl-mb4 {
     margin-bottom: 4rem !important;
 }
 
-.u-space-between {
+.utl-space-between {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -43,24 +43,24 @@
 
 // Text Utilities
 
-.u-align-left {
+.utl-align-left {
     text-align: left !important;
 }
-.u-align-center {
+.utl-align-center {
     text-align: center !important;
 }
-.u-align-right {
+.utl-align-right {
     text-align: right !important;
 }
 
 // Display Utils
 
-.u-screen-only {
+.utl-screen-only {
     @media print {
         display: none !important;
     }
 }
-.u-print-only {
+.utl-print-only {
     @media not print {
         display: none !important;
     }
