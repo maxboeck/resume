@@ -1,6 +1,8 @@
 # Resume
 
-An online résumé. [Demo Site](https://demo-resume.netlify.app)
+An online résumé. [Demo Site](https://demo-resume.netlify.app)  
+
+![a preview of the generated résumé as a website and in print](https://github.com/maxboeck/resume/tree/master/src/assets/images/demo/resume.png)  
 
 ## Features
 
