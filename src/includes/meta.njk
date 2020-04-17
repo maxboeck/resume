@@ -48,7 +48,7 @@
         "headline":"{{ author.name }}",
         "sameAs":[
             {%- for social in author.social -%}
-                "{{ social.url }}"{%- if not forloop.last -%},{%- endif -%}
+                "{{ social.url }}"{%- if not loop.last -%},{%- endif -%}
             {%- endfor -%}
         ],
         "@context":"http://schema.org"
