@@ -39,9 +39,69 @@ To edit the content and design of your résumé, follow these steps:
 
 ### 1. Personal Details
 
-Open `src/data/author.json` and edit the information describing yourself. The following properties are supported:
+Open `src/data/author.json` and edit the information describing yourself. The following properties are supported (optional properties can be removed from the JSON file):
 
-<table></table>
+<table>
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Description</th>
+            <th>Required</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>name</code></td>
+            <td>your full name</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>occupation</code></td>
+            <td>your job description</td>
+            <td>required</td>
+        </tr>
+        <tr>
+            <td><code>location</code></td>
+            <td>your town/state</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>avatar</code></td>
+            <td>the file name of your profile photo. Must be located in <code>src/assets/images/</code></td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>pronouns</code></td>
+            <td>your preferred <a href="https://en.wikipedia.org/wiki/Preferred_gender_pronoun">gender pronouns</a></td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>contact.email</code></td>
+            <td>your email address</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>contact.telephone</code></td>
+            <td>your phone number</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>skills</code></td>
+            <td>an array of strings describing your skillset</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>languages</code></td>
+            <td>an array of objects describing your spoken languages; each object should include a <code>name</code> (e.g. "English") and <code>level</code> (e.g. "fluent") property</td>
+            <td>optional</td>
+        </tr>
+        <tr>
+            <td><code>social</code></td>
+            <td>an array of objects for each social profile you want to link; each object should include a <code>name</code> (e.g. "Github"), <code>user</code> (e.g. "@maxboeck") and <code>url</code> (e.g. "https://github.com/maxboeck") property</td>
+            <td>optional</td>
+        </tr>
+    </tbody>
+</table>
 
 ### 2. Introduction
 
