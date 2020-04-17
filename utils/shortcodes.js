@@ -1,7 +1,18 @@
 module.exports = {
     icon: function (name, isSocial) {
         const id = name.toLowerCase().replace(/\s/g, '')
-        const availableSocialIcons = ['github', 'twitter', 'linkedin', 'skype']
+        const availableSocialIcons = [
+            'github',
+            'twitter',
+            'linkedin',
+            'skype',
+            'dribbble',
+            'behance',
+            'medium',
+            'reddit',
+            'slack',
+            'whatsapp'
+        ]
         if (isSocial && !availableSocialIcons.includes(id)) {
             return null
         }
