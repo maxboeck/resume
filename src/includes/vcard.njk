@@ -21,16 +21,16 @@
         </p> 
 
         <div class="vard__contact p-contact">
-            {% if author.contact.email %}
-                <a class="vcard__link u-email" aria-label="Email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+            {% if author.email %}
+                <a class="vcard__link u-email" aria-label="Email" href="mailto:{{ author.email | obfuscate | safe }}">
                     {% icon "email" %}
-                    {{ author.contact.email | obfuscate | safe }}
+                    {{ author.email | obfuscate | safe }}
                 </a>
             {% endif %}
-            {% if author.contact.telephone %}
-                <a class="vcard__link p-tel" aria-label="Telephone" href="tel:{{ author.contact.telephone | stripSpaces }}">
+            {% if author.telephone %}
+                <a class="vcard__link p-tel" aria-label="Telephone" href="tel:{{ author.telephone | stripSpaces }}">
                     {% icon "telephone" %}
-                    {{ author.contact.telephone }}
+                    {{ author.telephone }}
                 </a>
             {% endif %}
 

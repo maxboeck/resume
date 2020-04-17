@@ -2,13 +2,13 @@
     <div class="container">
 
         <div class="actions">
-            {% if author.contact.email %}
-                <a class="actions__btn has-tooltip" aria-label="Email" href="mailto:{{ author.contact.email | obfuscate | safe }}">
+            {% if author.email %}
+                <a class="actions__btn has-tooltip" aria-label="Email" href="mailto:{{ author.email | obfuscate | safe }}">
                     {% icon "email" %}
                 </a>
             {% endif %}
-            {% if author.contact.telephone %}
-                <a class="actions__btn has-tooltip" aria-label="Telephone" href="tel:{{ author.contact.telephone | stripSpaces }}">
+            {% if author.telephone %}
+                <a class="actions__btn has-tooltip" aria-label="Telephone" href="tel:{{ author.telephone | stripSpaces }}">
                     {% icon "telephone" %}
                 </a>
             {% endif %}

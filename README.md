@@ -76,12 +76,12 @@ Open `src/data/author.json` and edit the information describing yourself. The fo
             <td>optional</td>
         </tr>
         <tr>
-            <td><code>contact.email</code></td>
+            <td><code>email</code></td>
             <td>your email address</td>
             <td>optional</td>
         </tr>
         <tr>
-            <td><code>contact.telephone</code></td>
+            <td><code>telephone</code></td>
             <td>your phone number</td>
             <td>optional</td>
         </tr>

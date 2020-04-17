@@ -4,10 +4,8 @@
     "location": "Vienna, AT",
     "avatar": "avatar.jpg",
     "pronouns": "she/her",
-    "contact": {
-        "email": "anna.quincey@gmail.com",
-        "telephone": "+01 23 456 789"
-    },
+    "email": "anna.quincey@gmail.com",
+    "telephone": "+01 23 456 789",
     "skills": [
         "HTML",
         "CSS",
