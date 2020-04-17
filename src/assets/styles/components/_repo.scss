@@ -1,0 +1,39 @@
+.repo-link {
+    @include mq(lg) {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+
+        > span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform-origin: 50% 50%;
+            transform: rotate(45deg) translateY(-20px);
+            color: #fff;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 120px 120px 0;
+            border-color: transparent #000000 transparent transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
