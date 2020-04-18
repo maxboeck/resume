@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const mime = require('mime/lite')
 const { DateTime } = require('luxon')
 const isEmpty = require('lodash/isEmpty')
 
@@ -31,8 +32,10 @@ module.exports = {
 
     base64file: function (file) {
         const filepath = path.join(__dirname, `../src/${file}`)
+        const mimeType = mime.getType(file)
         const buffer = Buffer.from(fs.readFileSync(filepath))
-        return buffer.toString('base64')
+
+        return `data:${mimeType};base64,${buffer.toString('base64')}`
     },
 
     themeColors: function (colors) {
