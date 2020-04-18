@@ -71,7 +71,8 @@
     }
 
     .entrylist::before,
-    .entrylist__item::before {
+    .entrylist__item::before,
+    .bulletlist li::before {
         -webkit-print-color-adjust: exact !important;
     }
 
