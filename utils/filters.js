@@ -1,3 +1,5 @@
+const fs = require('fs')
+const path = require('path')
 const { DateTime } = require('luxon')
 const isEmpty = require('lodash/isEmpty')
 
@@ -25,6 +27,12 @@ module.exports = {
 
     stripSpaces: function (str) {
         return str.replace(/\s/g, '')
+    },
+
+    base64file: function (file) {
+        const filepath = path.join(__dirname, `../src/${file}`)
+        const buffer = Buffer.from(fs.readFileSync(filepath))
+        return buffer.toString('base64')
     },
 
     themeColors: function (colors) {
