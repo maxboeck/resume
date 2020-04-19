@@ -33,11 +33,17 @@
                     {{ author.telephone }}
                 </a>
             {% endif %}
+            {% if author.website %}
+                <a class="vcard__link u-url" aria-label="Website" href="{{ author.website }}">
+                    {% icon "laptop" %}
+                    {{ author.website | stripProtocol }}
+                </a>
+            {% endif %}
 
             {% if author.social %}
                 <div class="vcard__social">
                     {% for social in author.social %}
-                        <a class="vcard__link" href="{{ social.url }}" title="{{ social.name }}" rel="me">
+                        <a class="vcard__link" href="{{ social.url }}" aria-label="{{ social.name }}" rel="me">
                             {%- set isSocialIcon = true -%}
                             {%- icon social.name, isSocialIcon -%}
                             <span class="p-nickname">{{- social.user -}}</span>

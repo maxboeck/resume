@@ -29,12 +29,18 @@
         color: $gray;
     }
     &__link {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         margin-right: 1rem;
 
         .icon {
             margin-right: 0.125em;
+        }
+    }
+
+    @include mq(md) {
+        &__link {
+            display: inline-flex;
         }
     }
 

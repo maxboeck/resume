@@ -86,6 +86,11 @@ Open `src/data/author.json` and edit the information describing yourself. The fo
             <td>optional</td>
         </tr>
         <tr>
+            <td><code>website</code></td>
+            <td>your personal website</td>
+            <td>optional</td>
+        </tr>
+        <tr>
             <td><code>skills</code></td>
             <td>an array of strings describing your skillset</td>
             <td>optional</td>

@@ -30,6 +30,10 @@ module.exports = {
         return str.replace(/\s/g, '')
     },
 
+    stripProtocol: function (str) {
+        return str.replace(/(^\w+:|^)\/\//, '')
+    },
+
     base64file: function (file) {
         const filepath = path.join(__dirname, `../src/${file}`)
         const mimeType = mime.getType(file)
