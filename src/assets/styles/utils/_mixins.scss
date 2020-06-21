@@ -2,10 +2,14 @@
 // SCSS MIXINS
 //--------------------
 
-@mixin mq($name) {
+/// Creates media query for breakpoint and bigger
+///
+/// @param {string} $name - The name of the breakpoint
+/// @param {boolean} $print [false] - If the styles should also apply in print
+@mixin mq($name, $print: false) {
     $min: breakpoint-min($name, $breakpoints);
     @if $min {
-        @media (min-width: $min) {
+        @media #{if($print, 'print, all ', 'all')} and (min-width: $min) {
             @content;
         }
     } @else {
@@ -13,10 +17,14 @@
     }
 }
 
-@mixin mq-down($name) {
+/// Creates media query for smaller than breakpoint
+///
+/// @param {string} $name - The name of the breakpoint
+/// @param {boolean} $print [false] - If the styles should also apply in print
+@mixin mq-down($name, $print: false) {
     $min: breakpoint-min($name, $breakpoints);
     @if $min {
-        @media (max-width: ($min - 1px)) {
+        @media #{if($print, 'print, all ', 'all')} and (max-width: ($min - 1px)) {
             @content;
         }
     } @else {

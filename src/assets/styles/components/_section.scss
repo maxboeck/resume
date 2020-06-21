@@ -9,7 +9,7 @@
     padding-top: $spacing-y;
     padding-bottom: $spacing-y;
 
-    @include mq(md) {
+    @include mq(md, true) {
         &--half {
             grid-column: span 1;
         }
