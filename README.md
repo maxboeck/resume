@@ -18,6 +18,7 @@ An online résumé. [Demo Site](https://demo-resume.netlify.app)
 
 ## Getting Started
 
+__The project is based on [Node](https://nodejs.org/en/) and was tested with v10.15__. Newer versions can apparently cause problems with some of the dependencies - I'm working on resolving this soon.
 To install the necessary packages, run this command in the root folder of the site:
 
 ```
