@@ -33,12 +33,28 @@
         align-items: center;
         margin-right: 1rem;
 
+        @include hover-focus {
+            text-decoration: none;
+            
+            .vcard__link-text {
+                text-decoration: underline;
+            }
+        }
+
         .icon {
             margin-right: 0.125em;
         }
     }
 
     @include mq(md) {
+        &__social {
+            display: flex;
+            flex-wrap: wrap;
+
+            .vcard__link {
+                margin-bottom: 0.4em; // compensate line-height
+            }
+        }
         &__link {
             display: inline-flex;
         }

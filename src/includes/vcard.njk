@@ -20,23 +20,23 @@
             {% endif %}
         </p> 
 
-        <div class="vard__contact p-contact">
+        <div class="vcard__contact p-contact">
             {% if author.email %}
                 <a class="vcard__link u-email" aria-label="Email" href="mailto:{{ author.email | obfuscate | safe }}">
                     {% icon "email" %}
-                    {{ author.email | obfuscate | safe }}
+                    <span class="vcard__link-text">{{ author.email | obfuscate | safe }}</span>
                 </a>
             {% endif %}
             {% if author.telephone %}
                 <a class="vcard__link p-tel" aria-label="Telephone" href="tel:{{ author.telephone | stripSpaces }}">
                     {% icon "telephone" %}
-                    {{ author.telephone }}
+                    <span class="vcard__link-text">{{ author.telephone }}</span>
                 </a>
             {% endif %}
             {% if author.website %}
                 <a class="vcard__link u-url" aria-label="Website" href="{{ author.website }}">
                     {% icon "laptop" %}
-                    {{ author.website | stripProtocol }}
+                    <span class="vcard__link-text">{{ author.website | stripProtocol }}</span>
                 </a>
             {% endif %}
 
@@ -46,7 +46,7 @@
                         <a class="vcard__link" href="{{ social.url }}" aria-label="{{ social.name }}" rel="me">
                             {%- set isSocialIcon = true -%}
                             {%- icon social.name, isSocialIcon -%}
-                            <span class="p-nickname">{{- social.user -}}</span>
+                            <span class="vcard__link-text p-nickname">{{- social.user -}}</span>
                             <span class="sr-only">on {{ social.name }}</a>
                         </a>
                     {% endfor %}
