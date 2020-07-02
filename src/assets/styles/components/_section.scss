@@ -2,12 +2,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: $spacing-x * 2;
+    page-break-inside: avoid;
 }
 
 .section {
     grid-column: span 2;
     padding-top: $spacing-y;
     padding-bottom: $spacing-y;
+    page-break-inside: avoid;
 
     @include mq(md, true) {
         &--half {
