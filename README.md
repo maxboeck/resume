@@ -206,6 +206,10 @@ Supported properties are:
     </tbody>
 </table>
 
+## 5. Internationalization
+
+There are a few hardcoded english strings used in the template, such as the section titles and some labels. If you want to change the default language from english to something else, you can translate these strings by changing the values in `data/strings.json`.
+
 ## SpellCheck
 
 If you run the project locally in development, the content of your `introduction` and `entries` will be automatically spell-checked using your system default spellcheck engine.
