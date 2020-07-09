@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="container utl-space-between">
         <p>&copy; {{ author.name }}</p>
-        <p>Last updated: {{ build.timestamp | dateToFormat('dd.MM.yyyy') }}</p>
+        <p>{{ strings.labels.lastUpdated }}: {{ build.timestamp | dateToFormat('dd.MM.yyyy') }}</p>
         {% if build.demo %}
             <a href="https://github.com/maxboeck/resume" class="repo-link utl-screen-only">
                 <span>{% icon "github" %} view source</span>

@@ -1,0 +1,15 @@
+{
+    "titles": {
+        "introduction": "About Me",
+        "experience": "Work Experience",
+        "education": "Education",
+        "skills": "Skills",
+        "languages": "Languages"
+    },
+    "labels": {
+        "email": "Email",
+        "telephone": "Telephone",
+        "print": "Print Résumé",
+        "lastUpdated": "Last updated"
+    }
+}
