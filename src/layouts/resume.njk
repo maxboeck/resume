@@ -2,33 +2,34 @@
 layout: base
 ---
 
-<main class="main">
-    <div class="sections container">
+<main class="main container">
 
         <section class="section" id="section-introduction">
-            <h2 class="section__title">About Me</h2>
+            <h2 class="section__title">{{ strings.titles.introduction }}</h2>
             <div class="lead p-summary" data-spellcheck>
                 {{ content | safe }}
             </div>
         </section>
 
         <section class="section" id="section-experience">
-            <h2 class="section__title">Work Experience</h2>
+            <h2 class="section__title">{{ strings.titles.experience }}</h2>
             {% set entries = collections.work %}
             {% set microformat = "p-experience" %}
             {% include "entrylist.njk" %}
         </section>
 
         <section class="section" id="section-education">
-            <h2 class="section__title">Education</h2>
+            <h2 class="section__title">{{ strings.titles.education }}</h2>
             {% set entries = collections.education %}
             {% set microformat = "p-education" %}
             {% include "entrylist.njk" %}
         </section>
 
+    {% if author.skills or author.languages %}
+    <div class="grid grid--2col">
         {% if author.skills %}
         <section class="section section--half" id="section-skills">
-            <h2 class="section__title">Skills</h2>
+            <h2 class="section__title">{{ strings.titles.skills }}</h2>
             <ul class="bulletlist">
             {% for skill in author.skills %}
                 <li class="p-skill">{{ skill }}</li>
@@ -39,7 +40,7 @@ layout: base
 
         {% if author.languages %}
         <section class="section section--half" id="section-languages">
-            <h2 class="section__title">Languages</h2>
+            <h2 class="section__title">{{ strings.titles.languages }}</h2>
             <ul class="bulletlist">
             {% for language in author.languages %}
                 <li class="p-skill">{{ language.name }} ({{ language.level }})</li>
@@ -47,6 +48,7 @@ layout: base
             </ul>
         </section>
         {% endif %}
-
     </div>
+    {% endif %}
+
 </main>
