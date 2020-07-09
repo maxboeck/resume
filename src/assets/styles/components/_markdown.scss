@@ -1,0 +1,23 @@
+.markdown {
+    > * + * {
+        margin-top: 1rem;
+    }
+
+    a {
+        @include hyphenate;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    ul {
+        @extend .bulletlist;
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 1.375rem;
+    }
+}

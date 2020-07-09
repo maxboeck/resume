@@ -111,9 +111,7 @@ Open `src/data/author.json` and edit the information describing yourself. The fo
 
 ### 2. Introduction
 
-Open `src/introduction.md` and edit the text content of the file with your personal short introduction summary. Limit it to 2-3 sentences and convey your motivation.
-
-Leave the `layout` and `permalink` data at the top in place, and save the file.
+Open `entries/content/introduction.md` and edit the text content of the file with your personal short introduction summary. Limit it to 2-3 sentences and convey your motivation. You can edit the title of the section here as well. 
 
 ### 3. Work Experience & Education
 
@@ -163,7 +161,11 @@ Delete the demo files in there and create your own. The text should describe you
     </tbody>
 </table>
 
-### 4. Meta Data & Design
+### 4. Custom Content
+
+Edit `entries/content/custom.md` if you want to edit freeform content to the end of the CV. This could be a legal disclaimer or an additional section. Delete the file if you don't want this section to show up. 
+
+### 5. Meta Data & Design
 
 Open `src/data/meta.json` and replace the `url` with the URL of your hosted résumé. You can also customize the language and color scheme here.
 
@@ -206,7 +208,7 @@ Supported properties are:
     </tbody>
 </table>
 
-## 5. Internationalization
+### 6. Internationalization
 
 There are a few hardcoded english strings used in the template, such as the section titles and some labels. If you want to change the default language from english to something else, you can translate these strings by changing the values in `data/strings.json`.
 
