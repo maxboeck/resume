@@ -10,7 +10,6 @@ An online résumé. [Demo Site](https://demo-resume.netlify.app)
 * Semantic HTML
 * Accessible (WCAG AA) 
 * [h-resume](http://microformats.org/wiki/h-resume) Microformat
-* Spellcheck Linter
 * Self-Contained (no external resources)
 * Search Engine Optimized (meta, JSON-LD, etc...)
 * Critical CSS Inlined
@@ -211,16 +210,6 @@ Supported properties are:
 ### 6. Internationalization
 
 There are a few hardcoded english strings used in the template, such as the section titles and some labels. If you want to change the default language from english to something else, you can translate these strings by changing the values in `data/strings.json`.
-
-## SpellCheck
-
-If you run the project locally in development, the content of your `introduction` and `entries` will be automatically spell-checked using your system default spellcheck engine.
-
-Possible misspelled words will be announced as warnings in the console output, like so:
-
-```
-Linter: check spelling for "incorect"
-```
 
 ## Credits
 
