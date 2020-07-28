@@ -6,7 +6,7 @@ layout: base
 
         {% if collections.introduction.length %}
             {% set intro = collections.introduction|first %}
-            <section class="section" id="section-introduction" data-spellcheck>
+            <section class="section" id="section-introduction">
                 <h2 class="section__title">{{ intro.data.title }}</h2>
                 <div class="lead p-summary">
                     {{ intro.templateContent | safe }}
@@ -56,7 +56,7 @@ layout: base
 
     {% if collections.custom.length %}
         {% set custom = collections.custom|first %}
-        <section class="section" id="section-custom" data-spellcheck>
+        <section class="section" id="section-custom">
             {% if custom.data.title %}
                 <h2 class="section__title">{{ custom.data.title }}</h2>
             {% endif %}

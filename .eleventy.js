@@ -4,7 +4,6 @@ const markdownIt = require('markdown-it')
 const filters = require('./utils/filters.js')
 const transforms = require('./utils/transforms.js')
 const shortcodes = require('./utils/shortcodes.js')
-const linters = require('./utils/linters.js')
 const iconsprite = require('./utils/iconsprite.js')
 
 module.exports = function (config) {
@@ -25,13 +24,6 @@ module.exports = function (config) {
     Object.keys(shortcodes).forEach((shortcodeName) => {
         config.addShortcode(shortcodeName, shortcodes[shortcodeName])
     })
-
-    // Linters (Development Only)
-    if (process.env.ELEVENTY_ENV !== 'production') {
-        Object.keys(linters).forEach((linterName) => {
-            config.addLinter(linterName, linters[linterName])
-        })
-    }
 
     // Icon Sprite
     config.addNunjucksAsyncShortcode('iconsprite', iconsprite)
