@@ -7,7 +7,7 @@ const YOUR_GITHUB_USERNAME = 'maxboeck'
 
 module.exports = async function () {
     if (!YOUR_GITHUB_USERNAME) {
-        return null
+        return []
     }
 
     try {
@@ -15,7 +15,7 @@ module.exports = async function () {
         const repos = await Cache(
             `https://api.github.com/users/${YOUR_GITHUB_USERNAME}/repos`,
             {
-                duration: '1s',
+                duration: '1d',
                 type: 'json'
             }
         )

@@ -159,11 +159,15 @@ Delete the demo files in there and create your own. The text should describe you
     </tbody>
 </table>
 
-### 4. Custom Content
+### 4. Github Repositories
+
+If you want, you can include the five most starred repositories from your Github account. This will fetch the current data at build time, at most once a day. To do this, edit `src/data/repositories.js` and change the `YOUR_GITHUB_USERNAME` var to your Github username.
+
+### 5. Custom Content
 
 Edit `entries/content/custom.md` if you want to edit freeform content to the end of the CV. This could be a legal disclaimer or an additional section. Delete the file if you don't want this section to show up. 
 
-### 5. Meta Data & Design
+### 6. Meta Data & Design
 
 Open `src/data/meta.json` and replace the `url` with the URL of your hosted résumé. You can also customize the language and color scheme here.
 
@@ -206,7 +210,7 @@ Supported properties are:
     </tbody>
 </table>
 
-### 6. Internationalization
+### 7. Internationalization
 
 There are a few hardcoded english strings used in the template, such as the section titles and some labels. If you want to change the default language from english to something else, you can translate these strings by changing the values in `data/strings.json`.
 

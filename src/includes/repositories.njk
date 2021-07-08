@@ -1,6 +1,6 @@
-{% if repos.length %}
+{% if repositories.length %}
 <ol class="repolist">
-    {% for repo in repos.slice(0, 5) %}
+    {% for repo in repositories.slice(0, 5) %}
         <li class="repolist__item">
             <h3 class="repolist__title"><a href="{{ repo.html_url }}">{{ repo.name }}</a></h3>
             <p class="repolist__url utl-print-only">{{ repo.html_url }}</p>
