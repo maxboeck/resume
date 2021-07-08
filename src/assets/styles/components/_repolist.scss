@@ -1,0 +1,29 @@
+.repolist {
+    &__item:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    &__title {
+        font-family: $font-family-base;
+        font-size: 1.25rem;
+    }
+    &__url {
+        color: $gray;
+        font-style: italic;
+    }
+    &__stats {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0.875rem;
+        padding-top: 0.25rem;
+
+        > p {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+        }
+
+        .icon {
+            margin-right: 0.125em;
+        }
+    }
+}

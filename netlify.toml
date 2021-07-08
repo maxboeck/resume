@@ -5,6 +5,12 @@
 [context.production.environment]
     ELEVENTY_ENV = "production"
 
+[[plugins]]
+package = "netlify-plugin-cache"
+  [plugins.inputs]
+  # Optional (but highly recommended). Defaults to [".cache"].
+  paths = [".cache"]
+
 [[headers]]
     for = "/*"
     [headers.values]

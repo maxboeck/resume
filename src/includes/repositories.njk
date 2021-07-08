@@ -1,0 +1,17 @@
+{% if repos.length %}
+<ol class="repolist">
+    {% for repo in repos.slice(0, 5) %}
+        <li class="repolist__item">
+            <h3 class="repolist__title"><a href="{{ repo.html_url }}">{{ repo.name }}</a></h3>
+            <p class="repolist__url utl-print-only">{{ repo.html_url }}</p>
+            {% if repo.description %}
+                <p class="repolist__desc">{{ repo.description }}</p>
+            {% endif %}
+            <div class="repolist__stats">
+                <p>{%- icon "star" -%}{{ repo.stargazers_count }}<span class="sr-only"> stars</span></p>
+                <p>{%- icon "fork" -%}{{ repo.forks_count }}<span class="sr-only"> forks</span></p>
+            </div>
+        </li>
+    {% endfor %}
+</ol>
+{% endif %}
