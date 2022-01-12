@@ -33,7 +33,7 @@
     "html-minifier": "^4.0.0",
     "lodash": "^4.17.21",
     "luxon": "^1.26.0",
-    "markdown-it": "^12.0.4",
+    "markdown-it": "^12.3.2",
     "memfs": "^3.2.0",
     "mime": "^2.4.4",
     "netlify-plugin-cache": "^1.0.3",
