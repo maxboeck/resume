@@ -37,7 +37,7 @@
     "memfs": "^3.2.0",
     "mime": "^2.4.4",
     "netlify-plugin-cache": "^1.0.3",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "npm-run-all": "^4.1.5",
     "svg-sprite": "^1.5.0",
     "webpack": "^5.28.0"
